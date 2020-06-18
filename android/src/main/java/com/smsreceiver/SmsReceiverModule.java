@@ -47,7 +47,7 @@ public class SmsReceiverModule extends ReactContextBaseJavaModule {
   public void startReadSMS(final Callback success, final Callback error) {
     try {
       if (ContextCompat.checkSelfPermission(reactContext, Manifest.permission.RECEIVE_SMS) == PackageManager.PERMISSION_GRANTED
-        && Context.checkSelfPermission(reactContext, Manifest.permission.READ_SMS) == PackageManager.PERMISSION_GRANTED) {
+        && ContextCompat.checkSelfPermission(reactContext, Manifest.permission.READ_SMS) == PackageManager.PERMISSION_GRANTED) {
           msgReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
