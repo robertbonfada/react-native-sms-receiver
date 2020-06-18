@@ -85,7 +85,7 @@ public class SmsReceiverModule extends ReactContextBaseJavaModule {
     } catch (Exception e) {
       e.printStackTrace();
     }
-    content = "{ \"address\": " + address + ", \"message\": " + message + "}";
+    content = "{ \"address\": \"" + address + "\", \"message\": \"" + message + "\"}";
     return content;
   }
 }
