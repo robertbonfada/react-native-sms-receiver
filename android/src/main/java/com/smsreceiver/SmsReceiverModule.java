@@ -66,10 +66,11 @@ public class SmsReceiverModule extends ReactContextBaseJavaModule {
     }
   }
 
-  private String[] getMessageFromMessageIntent(Intent intent) {
+  private String getMessageFromMessageIntent(Intent intent) {
     final Bundle bundle = intent.getExtras();
     String message = "";
     String address = "";
+    String content = "";
     try {
       if (bundle != null) {
         final Object[] pdusObj = (Object[]) bundle.get("pdus");
@@ -84,6 +85,7 @@ public class SmsReceiverModule extends ReactContextBaseJavaModule {
     } catch (Exception e) {
       e.printStackTrace();
     }
-    return new String[] {message, address};
+    content = "{ \"address\": " + address + ", \"message\": " + message + "}" 
+    return content;
   }
 }
