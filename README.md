@@ -21,7 +21,7 @@ import { requestReadSMSPermission, startReadSMS} from 'react-native-sms-receiver
 Example:
 
 ```js
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, View } from "react-native";
 import { requestReadSMSPermission, startReadSMS} from 'react-native-sms-receiver/Receiver';
 
