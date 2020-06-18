@@ -24,6 +24,8 @@ const hasSMSPermission = async () => {
 };
 
 export async function startReadSMS(callback: any) {
+  console.log('Native Modules: ');
+  console.log(NativeModules);
   let resultFun = (status: any, sms: any, error?: any) => {
     if (callback) {
       callback(status, sms, error);
