@@ -11,7 +11,7 @@ import java.util.List;
 public class ReadSmsPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Collections.<NativeModule>singletonList(new ReadSmsModule(reactContext));
+        return Collections.<NativeModule>singletonList(new SmsReceiverModule(reactContext));
     }
 
     @Override
