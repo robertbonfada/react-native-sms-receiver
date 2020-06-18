@@ -41,7 +41,6 @@ export default function App() {
     startReadingMessages();
   }, [])
 
-  const [visible, setVisible] = useState(false);
   return (
     <View>
       <Text>IT'S TIME</Text>
