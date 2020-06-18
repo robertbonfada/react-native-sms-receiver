@@ -1,6 +1,6 @@
 {
   "name": "react-native-sms-receiver",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A React Native SMS Receiver",
   "react-native": "index.ts",
   "private": false,
@@ -29,7 +29,9 @@
     "url": "https://github.com/RobertBonfada/react-native-sms-receiver/issues"
   },
   "dependencies": {
-    "react": "16.11.0",
+    "react": "16.11.0"
+  },
+  "peerDependencies": {
     "react-native": "0.62.2"
   },
   "devDependencies": {
