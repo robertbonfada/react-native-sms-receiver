@@ -43,7 +43,7 @@ export default function App() {
 
   return (
     <View>
-      <Text>IT'S TIME</Text>
+      <Text>🛸</Text>
     </View>
   );
 }
