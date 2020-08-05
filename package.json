@@ -1,6 +1,6 @@
 {
   "name": "react-native-sms-receiver",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "A React Native SMS Receiver",
   "react-native": "index.ts",
   "private": false,
