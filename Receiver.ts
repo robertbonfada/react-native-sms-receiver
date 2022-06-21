@@ -63,12 +63,21 @@ export async function requestReadSMSPermission() {
       PermissionsAndroid.PERMISSIONS.RECEIVE_SMS,
       PermissionsAndroid.PERMISSIONS.READ_SMS,
     ]);
-    if (status === PermissionsAndroid.RESULTS.GRANTED) {
+    // As we request multiple permission, requestMultiple Method returns and object so we need to check like below code.
+    if (
+      status[PermissionsAndroid.PERMISSIONS.RECEIVE_SMS] === PermissionsAndroid.RESULTS.GRANTED &&
+      status[PermissionsAndroid.PERMISSIONS.READ_SMS] === PermissionsAndroid.RESULTS.GRANTED
+    ) {
       return true;
     }
-    if (status === PermissionsAndroid.RESULTS.DENIED) {
+    
+    if (status[PermissionsAndroid.PERMISSIONS.RECEIVE_SMS] === PermissionsAndroid.RESULTS.DENIED &&
+      status[PermissionsAndroid.PERMISSIONS.READ_SMS] === PermissionsAndroid.RESULTS.DENIED
+    ) {
       console.log('Read Sms permission denied by user.', status);
-    } else if (status === PermissionsAndroid.RESULTS.NEVER_ASK_AGAIN) {
+    } else if (status[PermissionsAndroid.PERMISSIONS.RECEIVE_SMS] === PermissionsAndroid.RESULTS.NEVER_ASK_AGAIN &&
+      status[PermissionsAndroid.PERMISSIONS.READ_SMS] === PermissionsAndroid.RESULTS.NEVER_ASK_AGAIN
+    ) {
       console.log('Read Sms permission revoked by user.', status);
     }
     return false;
