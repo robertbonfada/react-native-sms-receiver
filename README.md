@@ -1,7 +1,6 @@
 # react-native-sms-receiver
 A package that creates a broadcast receiver of SMS
 
-<a href="https://www.buymeacoffee.com/robertbonfada" target="_blank"><img src="https://i.ibb.co/djs76WD/buymeacoffee.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## Installation 🚀 
 ```bash
